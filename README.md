@@ -1,1 +1,2 @@
-# UdemyPythonMegaCourse
+# Udemy Python Mega Course
+My attempt at the assignments taught at https://www.udemy.com/the-python-mega-course/ ...
