@@ -11,8 +11,6 @@ class Model():
     def km_to_miles(self, s):
         if len(s) > 0:
             return float(s)*1.6
-            # t1.delete(1.0, Tk.END)
-            # t1.insert(Tk.END, miles)
 
 class View():
     def __init__(self, master):
@@ -22,8 +20,7 @@ class View():
         self.e1 = Tk.Entry(master, textvariable = self.e1_value)
         
         self.t1 = Tk.Text(master, height = 1, width = 20 )
-        
-        
+
         self.b1.grid(row = 0, column = 0)
         self.e1.grid(row = 0, column = 1)
         self.t1.grid(row = 0, column = 2)
