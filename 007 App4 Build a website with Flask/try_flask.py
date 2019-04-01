@@ -17,6 +17,10 @@ def home():
 def about():
     return render_template("about.html")
 
+@app.route('/stock/')
+def stock():
+    return render_template("stock.html")
+
 if __name__ == '__main__':
     app.run(debug=True)
 
