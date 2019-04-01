@@ -5,6 +5,7 @@ Created on Sun Mar 17 22:58:00 2019
 @author: e1081018
 """
 
+import model_plot as mp
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -19,6 +20,7 @@ def about():
 
 @app.route('/stock/')
 def stock():
+    mp.write_plot_page("templates/stock.html")
     return render_template("stock.html")
 
 if __name__ == '__main__':
