@@ -23,6 +23,10 @@ def stock():
     mp.write_plot_page("templates/stock.html")
     return render_template("stock.html")
 
+@app.route('/components/')
+def components():
+    return render_template("components.html")
+
 if __name__ == '__main__':
     app.run(debug=True)
 

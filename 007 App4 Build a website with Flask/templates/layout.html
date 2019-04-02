@@ -93,15 +93,16 @@
   <body>
     <div class="navbar">
       <a href="{{ url_for('home') }}">Home</a>
-	  <a href="{{ url_for('stock') }}">Stock</a>
+	  <a href="{{ url_for('about') }}">About</a>
       <div class="dropdown">
-        <button class="dropbtn">Dropdown 
+        <button class="dropbtn">Bokeh Graphs 
           <i class="fa fa-caret-down"></i> <!-- Stolen from the ajax stylesheet.
                                              The tag "<i>" denotes italics without this stylesheet.
                                            -->
         </button>
         <div class="dropdown-content">
-          <a href="{{ url_for('about') }}">About</a>
+          <a href="components">Using components</a>
+          <a href="{{ url_for('stock') }}">Using file_html</a>
         </div>
       </div> 
     </div>
