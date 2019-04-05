@@ -7,11 +7,11 @@ Created on Mon Apr  1 17:18:10 2019
 
 from bokeh.plotting import figure
 from bokeh.resources import CDN
-from bokeh.embed import file_html
+from bokeh.embed import file_html, components
 import quandl
 
 def get_candlesticks():
-    df = quandl.get("CHRIS/ICE_T1", start_date = "2018-03-28", end_date = "2019-03-28")
+    df = quandl.get("CHRIS/ICE_T1", start_date = "2018-03-28", end_date = "2019-03-28", authtoken="kKBgENVq-3A6eeWUb5Pn")
     green_bars = df[df['Settle'] > df['Open']] # up days
     red_bars   = df[df['Settle'] < df['Open']] # down days 
     twelve_hours = 12*60*60*1000
@@ -24,6 +24,9 @@ def get_candlesticks():
     fig.vbar(red_bars.index, width=twelve_hours, bottom=red_bars["Open"], top=red_bars["Settle"], color="red")
 
     return fig
+
+def get_components(IBokehFig):
+    return components(IBokehFig)
 
 def write_plot_page(out_html_file):
     plot = get_candlesticks()
